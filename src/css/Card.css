@@ -1,0 +1,23 @@
+.card {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-col {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-left {
+  gap: 0.75rem;
+}
+
+.card p {
+    margin-top: 25px;
+}
+
+.card img {
+    max-height: 150px;
+    object-fit: cover;
+}
