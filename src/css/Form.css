@@ -1,0 +1,144 @@
+.creator-form {
+  min-height: 100vh;
+  background-color: #0f1115;
+  color: #f5f5f5;
+  padding: 6rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.creator-form p {
+  font-size: 1.1rem;
+  color: #ccc;
+}
+
+.creator-form h1 {
+  font-size: 3rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.creator-form form {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+}
+
+.creator-form form label {
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: #f5f5f5;
+    text-align: left;
+    margin-bottom: 0.5rem;
+}
+
+.creator-form form input[type="text"],
+.creator-form form textarea {
+    width: 100%;
+    padding: 0.9rem 1rem;
+    border-radius: 12px;
+    border: 1px solid #333;
+    background-color: #1a1c22;
+    color: #f5f5f5;
+    font-size: 1rem;
+    transition: all 0.25s ease;
+    margin-bottom: 1.5rem;
+    font-family: sans-serif;
+}
+
+.creator-form form input[type="text"]::placeholder,
+.creator-form form textarea::placeholder {
+  color: #888;
+  font-family: sans-serif;
+}
+
+.creator-form form input[type="text"]:focus,
+.creator-form form textarea:focus {
+  outline: none;
+  border-color: #7c8cff;
+  box-shadow: 0 0 0 3px rgba(124, 140, 255, 0.2);
+}
+
+.creator-form form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.creator-form form h2 {
+  font-size: 1.6rem;
+  color: #f5f5f5;
+  text-align: left;
+}
+
+.creator-form form button:not(.back-btn, .delete-btn) {
+  width: 300px;
+  align-self: center;
+  background: linear-gradient(135deg, #7c8cff, #b58cff);
+  color: #0f1115;
+  padding: 1rem 2.8rem;
+  border-radius: 999px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.creator-form form button:hover:not(.back-btn, .delete-btn) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(124, 140, 255, 0.4);
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
+.back-btn {
+  width: 300px;
+  background: transparent;
+  color: #bbb;
+  border: 1px solid #333;
+  padding: 1rem 2.8rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  font-size: 1.2rem;
+}
+
+.back-btn:hover {
+  color: white;
+  border-color: #666;
+}
+
+.creator-form .delete-btn {
+  width: 300px;
+  align-self: center;
+  background: transparent;
+  color: #ff6666;
+  border: 1px solid #ff6666;
+  padding: 1rem 2.8rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  font-size: 1.2rem;
+  margin-top: 30px;
+}
+
+.creator-form .delete-btn:hover {
+  color: white;
+  border-color: #ff3333;
+  background-color: rgba(255, 102, 102, 0.1);
+}
+
+.loading-text {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #f5f5f5;     
+  text-align: center;
+  margin-top: 4rem;
+}

@@ -1,4 +1,66 @@
+body {
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+.show {
+  min-height: 100vh;
+  background-color: #0f1115;
+  color: #f5f5f5;
+  padding: 4rem 2rem;
+}
+
 .show h1 {
-    margin-top: 200px;
-    margin-bottom: 50px;
+  font-family: "Gravitas One", serif; 
+  font-size:  4rem;
+  text-align: center;
+  margin-bottom: 4rem;
+  margin-top: 10rem;
+}
+
+.show-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin-bottom: 8rem;
+}
+
+.ghost-btn {
+  background: transparent;
+  color: #bbb;
+  border: 1px solid #333;
+  padding: 1rem 2.8rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  font-size: 1.2rem;
+}
+
+.ghost-btn:hover {
+  color: white;
+  border-color: #666;
+}
+
+.primary-btn {
+  background: linear-gradient(135deg, #7c8cff, #b58cff);
+  color: #0f1115;
+  border: none;
+  padding: 1rem 2.8rem;
+  border-radius: 999px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.primary-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(124, 140, 255, 0.4);
+}
+
+.show-creators {
+  margin-top: 200px;
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem;
 }

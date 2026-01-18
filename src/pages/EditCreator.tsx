@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { supabase } from '../client';
+import '../css/Form.css';
 
 const EditCreator = () => {
     const { id } = useParams<{ id: string }>();
@@ -38,7 +39,6 @@ const EditCreator = () => {
         fetchCreator();
     }, [id]);
 
-    // Step 2: Update creator in DB
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
 
@@ -68,49 +68,65 @@ const EditCreator = () => {
       console.error(error);
       alert('Error deleting creator');
     } else {
-      navigate('/'); // Go back to home page after deletion
+      navigate('/');
     }
   };
 
-    if (loading) return <p>Loading...</p>;
+    if (loading) return <p className="loading-text">Loading...</p>;
 
     return (
-        <div>
-        <h1>Edit Creator</h1>
-        <form onSubmit={handleSubmit}>
+        <div className="creator-form">
+          <h1>EDIT CREATOR</h1>
+            <form onSubmit={handleSubmit}>
+                <label htmlFor="name">Name*</label>
             <input
-            type="text"
-            placeholder="Name"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            required
+                type="text"
+                id="name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                required
             />
-            <input
-            type="text"
-            placeholder="URL"
-            value={url}
-            onChange={(e) => setUrl(e.target.value)}
-            required
-            />
+
+            <label htmlFor="description">Description*</label>
             <textarea
-            placeholder="Description"
-            value={description}
-            onChange={(e) => setDescription(e.target.value)}
-            required
+                id="description"
+                placeholder="Provide a description of the creator"
+                value={description}
+                onChange={(e) => setDescription(e.target.value)}
+                required
             />
+
+            <label htmlFor="imageURL">Image URL</label>
             <input
-            type="text"
-            placeholder="Image URL (optional)"
-            value={imageURL}
-            onChange={(e) => setImageURL(e.target.value)}
+                type="text"
+                id="imageURL"
+                placeholder="Provide a link to an image of the creator (optional)"
+                value={imageURL}
+                onChange={(e) => setImageURL(e.target.value)}
             />
-            <button type="submit">Update Creator</button>
-        </form>
-        <button onClick={handleDelete}>
-        Delete Creator
-      </button>
+
+            <h2>Social Media Link</h2>
+            <label htmlFor="url">URL*</label>
+            <input
+                type="text"
+                id="url"
+                value={url}
+                placeholder='Provide a link to a social media of the creator'
+                onChange={(e) => setUrl(e.target.value)}
+                required
+            />
+
+            <div className="form-buttons">
+              <button type="button" className="back-btn" onClick={() => navigate(-1)}>Cancel</button>
+              <button type="submit">Update Creator</button>
+            </div>
+            
+            <button className="delete-btn" onClick={handleDelete}>
+            Delete Creator
+          </button>
+          </form>
         </div>
-    );
+      );
     };
 
 export default EditCreator;

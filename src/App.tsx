@@ -11,10 +11,12 @@ import './App.css'
 
 function App() {
   const [creators, setCreators] = useState<Creator[]>([]);
+  const [loading, setLoading] = useState(true);
   const location = useLocation();
 
   useEffect(() => {
     const fetchCreators = async () => {
+      setLoading(true);
       const { data, error } = await supabase 
         .from('creators')
         .select('*');
@@ -23,12 +25,13 @@ function App() {
       } else {
         setCreators(data);
       }
+      setLoading(false);
     };
     fetchCreators();
   }, [location]);
 
   const routes = useRoutes([
-    { path: '/', element: <ShowCreators creators={creators} /> },
+    { path: '/', element: <ShowCreators creators={creators} loading={loading} /> },
     { path: '/creator/:id', element: <ViewCreator /> },
     { path: '/add', element: <AddCreator /> },
     { path: '/edit/:id', element: <EditCreator /> },

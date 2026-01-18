@@ -5,23 +5,33 @@ import '../css/ShowCreators.css'
 
 type ShowCreatorsProps = {
   creators: Creator[];
+  loading?: boolean;
 };
 
-const ShowCreators = ({ creators }: ShowCreatorsProps) => {
+const ShowCreators = ({ creators, loading = false }: ShowCreatorsProps) => {
+  if (loading) {
+    return <p className="loading-text">Loading...</p>;
+  }
+
   if (creators.length === 0) {
-    return <p>No content creators added yet.</p>;
+    return <p className="loading-text">No content creators added yet</p>;
   }
 
   return (
     <div className="show">
         <h1>CREATORVERSE</h1>
-        <button onClick={() => window.location.href = '#show-creators'}>
-            Go to Creators
-        </button>
-        <Link to="/add">
-            <button>Add New Creator</button>
-        </Link>
-        <div className="show-creators">
+        <div className="show-buttons">
+            <button 
+            className="ghost-btn"
+            onClick={() => window.location.href = '#show-creators'}
+            >
+                VIEW ALL CREATORS
+            </button>
+            <Link to="/add">
+                <button className="primary-btn">ADD A CREATOR</button>
+            </Link>
+        </div>
+        <div className="show-creators" id="show-creators">
         {creators.map((creator) => (
             <Card
             key={creator.id}
