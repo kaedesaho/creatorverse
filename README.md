@@ -2,7 +2,7 @@
 
 Submitted by: **Kaede Saho**
 
-About this web app: **👉🏿 app description here**
+About this web app: **A React-based app for managing favorite content creators, allowing users to view, add, edit, and delete creators with images, descriptions, and links to their social media**
 
 Time spent: About **15** hours
 
@@ -10,7 +10,6 @@ Time spent: About **15** hours
 
 The following **required** functionality is completed:
 
-<!-- 👉🏿👉🏿👉🏿 Make sure to check off completed functionality below -->
 - [x] **A logical component structure in React is used to create the frontend of the app**
 - [x] **At least five content creators are displayed on the homepage of the app**
 - [x] **Each content creator item includes their name, a link to their channel/page, and a short description of their content**
@@ -36,15 +35,17 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented required features:
 
-https://github.com/kaedesaho/creatorverse/assets/Walkthrough.mov
+![Video Walkthrough](assets/walkthrough.gif)
+
+GIF created with [Kap](https://getkap.co/)
 
 ## Notes
 
-Describe any challenges encountered while building the app or any additional context you'd like to add.
+One challenge I encountered was that the layout of the image and description would shift based on the content length. I fixed this by adjusting the CSS so that the image placeholder and description remain properly aligned regardless of content.
 
 ## License
 
-Copyright [👉🏿 yyyy] [👉🏿 name of copyright owner]
+Copyright 2026 Kaede Saho
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
