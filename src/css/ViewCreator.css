@@ -31,16 +31,16 @@
   width: 320px;
   height: 320px;
   border-radius: 16px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-  border: 2px solid rgba(0, 0, 0, 0.1);
-  background: rgba(0, 0, 0, 0.02);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.03);
   display: flex;
   justify-content: center; 
 }
 
 .creator-image-placeholder i {
   font-size: 12rem;
-  color: rgba(0, 0, 0, 0.15);
+  color: rgba(255, 255, 255, 0.195);
   margin-top: 50px;
 }
 
