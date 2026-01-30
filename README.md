@@ -35,9 +35,9 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented required features:
 
-![Video Walkthrough](assets/walkthrough.gif)
+![Video Walkthrough](assets/creatorverse.gif)
 
-GIF created with [Kap](https://getkap.co/)
+GIF created with [FFmpeg](https://www.ffmpeg.org/)
 
 ## Notes
 
