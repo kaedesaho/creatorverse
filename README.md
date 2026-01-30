@@ -35,7 +35,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented required features:
 
-![Video Walkthrough](assets/creatorverse.gif)
+![Video Walkthrough](assets/demo.gif)
 
 GIF created with [FFmpeg](https://www.ffmpeg.org/)
 
